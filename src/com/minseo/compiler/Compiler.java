@@ -69,6 +69,49 @@ public class Compiler {
 		return compiled;		
 	}
 	
+	public Node readToken(String expr)
+	{
+		String s=GetOneToken(expr);
+		Node n=null;
+		try {
+			float f= Float.parseFloat(s);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		if (s.startsWith("\"") && s.endsWith("\""))
+		{
+			n=new NodeVal();
+			n.type=Node.tString;
+			n.val=s;
+		}
+		try {
+			int i=Integer.parseInt(s);			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+//		if ()
+		{
+			n=new NodeVal();
+			n.type=Node.tString;
+			n.val=s;
+		}
+		return n;
+	}
+	
+	
+	public String readMul(String expr)
+	{
+		
+		return expr;
+	}
+	
+	public String readAdd(String expr)
+	{
+		return expr;
+	}
+	
 	public String ReadExpression(String s)
 	{
 		return s;
@@ -137,7 +180,6 @@ public class Compiler {
 	public String postprocessor(String text)
 	{
 		return text.replace('\n', ' ').replace('\r', ' ');		
-		
 	}
 	
 	public String Process(String text)

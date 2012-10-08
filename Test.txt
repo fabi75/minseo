@@ -1,11 +1,17 @@
 var paper = Raphael("Game", 640, 480)
 paper.clear()
-var circle=paper.circle(60,60,60)
-// truc
-circle.attr("fill", "#f00")
-/*
-	truc
-
-*/
+var circle=paper.circle(140,100,20)
+var circle2=paper.circle(260,100,20)
+var circle3=paper.circle(200,150,130)
+//test comment
+circle.attr("fill", "#00F")
 circle.attr("stroke", "#fff")
+/*
+
+test comment
+*/
+circle2.attr("fill", "#00f")
+circle2.attr("stroke", "#fff")
+
+
 paper.attr("fill", "#ff")
